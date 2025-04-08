@@ -49,6 +49,14 @@ function openStatutes() {
 /**
  * Toggle para el menú hamburguesa en móviles
  */
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('nav').classList.toggle('active');
+// Mobile menu toggle
+document.getElementById('menuToggle').addEventListener('click', function() {
+    document.querySelector('.nav-menu').classList.toggle('active');
+});
+
+// Close menu when clicking a link
+document.querySelectorAll('.nav-menu button').forEach(button => {
+    button.addEventListener('click', () => {
+        document.querySelector('.nav-menu').classList.remove('active');
+    });
 });
