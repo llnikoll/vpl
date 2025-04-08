@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partido Político</title>
+    <link rel="stylesheet" href="assets/index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Encabezado principal con logo, botón hamburguesa y navegación -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo del Partido" class="logo">
+            <div class="logo-text">
+                <span class="main-text">VPL</span>
+                <span class="sub-text">PARTIDO DE LA LIBERTAD</span>
+            </div>
+        </div>
+        <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+        <nav>
+            <button onclick="scrollToSection('hero')">Inicio</button>
+            <button onclick="openStatutes()">Estatuto</button>
+            <button onclick="scrollToSection('candidates')">Candidatos</button>
+            <button onclick="scrollToSection('contact')">Contacto</button>
+        </nav>
+    </header>
+
+    <!-- Sección Hero/Banner principal -->
+    <section class="hero" id="hero">
+        <img src="images/Banner.jpg" alt="Sé proponente desde tu celular - Partido de la Libertad" class="hero-image">
+    </section>
+
+    <!-- Sección de candidatos con Nicolás Oviedo destacado y centrado -->
+    <section id="candidates">
+        <h2 class="section-title">Nuestros Candidatos</h2>
+        <div class="candidates">
+            <!-- Candidato Principal (destacado y centrado) -->
+            <div class="candidate-card featured">
+                <img src="images/Niko.png" alt="Candidato Principal" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Ing. Nicolás Oviedo</h3>
+                    <p>Pre-Candidato a la Intendencia. Economista con amplia experiencia en gestión pública y desarrollo social. Su visión de país se centra en la igualdad de oportunidades y el crecimiento sostenible.</p>
+                </div>
+            </div>
+            
+            <!-- Resto de candidatos en orden secundario -->
+            <div class="candidate-card">
+                <img src="images/Noemi.png" alt="Candidato 2" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Abog. Noemí Rodríguez</h3>
+                    <p>Candidata a la consejalía. Abogada especializada en derechos humanos y política internacional. Defensora de la transparencia gubernamental y la lucha contra la corrupción.</p>
+                </div>
+            </div>
+            
+            <div class="candidate-card">
+                <img src="images/Jhonny.png" alt="Candidato 3" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Jhony</h3>
+                    <p>Candidato a la consejalía. Ingeniero ambiental con experiencia en políticas de sostenibilidad. Comprometido con la acción climática y la protección de los recursos naturales.</p>
+                </div>
+            </div>
+            
+            <div class="candidate-card">
+                <img src="images/Oscar.png" alt="Candidato 4" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Oscar González</h3>
+                    <p>Candidato a la consejalía. Médico dedicado a mejorar el sistema de salud pública. Su prioridad es garantizar el acceso universal a servicios médicos de calidad.</p>
+                </div>
+            </div>
+            
+            <div class="candidate-card">
+                <img src="images/Ruben.png" alt="Candidato 5" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Ruben Dario Franco</h3>
+                    <p>Candidato a la consejalía. Sociólogo especializado en desarrollo urbano y planificación territorial. Busca la integración efectiva de las comunidades rurales y urbanas.</p>
+                </div>
+            </div>
+            
+            <div class="candidate-card">
+                <img src="images/candidato6.jpg" alt="Candidato 6" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Miguel Torres</h3>
+                    <p>Candidato a la consejalía. Empresario con enfoque en la economía social y solidaria. Propone iniciativas para el emprendimiento local y la generación de empleo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto con formulario -->
+    <section id="contact">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <input type="text" name="from_name" placeholder="Nombre completo" required>
+                <input type="email" name="to_name" placeholder="Correo electrónico" required>
+                <textarea name="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página con información de contacto y redes sociales -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo-section">
+                    <img src="images/logo.png" alt="Logo del Partido" class="footer-logo">
+                    <div class="footer-logo-text">
+                        <span class="main-text">VPL</span>
+                        <span class="sub-text">PARTIDO DE LA LIBERTAD</span>
+                    </div>
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Constitución #123, Centro</p>
+                <p><i class="fas fa-city"></i> Ciudad Capital, CP 12345</p>
+                <p><i class="fas fa-phone"></i> Tel: (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="15c3b333a153c53427213c313a253a393c213c363a7b3a2732">[email&#160;protected]</a></p>
+            </div>
+            
+            <div class="social-section">
+                <h3 class="social-title">Síguenos en redes</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 VPL - Partido de la Libertad. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="assets/index.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d34af82d5b9934',t:'MTc0NDEzMTMzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
