@@ -547,6 +547,38 @@ footer {
 
 /* Mobile-first styles */
 @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+        /* Adjust header spacing */
+        header {
+            padding: 10px 0;
+            margin-bottom: 0;
+        }
+    
+        /* Adjust hero section spacing */
+        .hero {
+            margin: 0;
+            padding: 0;
+        }
+    
+        .hero-image {
+            margin-bottom: 0;
+        }
+    
+        /* Adjust mayor candidate section spacing */
+        #mayor-candidate {
+            padding-top: 20px;
+            margin-top: 0;
+        }
+    
+        .section-title {
+            margin: 15px 0;
+        }
+    
+        .mayor-candidate-container {
+            padding: 0 10px;
+        }
+    }
+
     .logo-container {
         flex-direction: column;
         align-items: center;
