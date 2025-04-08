@@ -402,13 +402,6 @@ footer {
    8. MEDIA QUERIES - RESPONSIVE DESIGN
    ==================================== */
 
-/* Tablets y dispositivos medianos */
-@media (max-width: 992px) {
-    .council-candidates {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 /* Dispositivos móviles */
 @media (max-width: 768px) {
     header {
@@ -416,31 +409,31 @@ footer {
         padding: 0.5rem;
         align-items: flex-start;
     }
-    
+
     .logo-container {
         margin-bottom: 0.5rem;
         width: 100%;
         justify-content: space-between;
     }
-    
+
     .logo {
         height: 40px;
     }
-    
+
     .logo-text .main-text {
         font-size: 18px;
     }
-    
+
     .logo-text .sub-text {
         font-size: 12px;
     }
-    
+
     .menu-toggle {
         display: block;
         position: relative;
         z-index: 101;
     }
-    
+
     nav {
         display: none;
         position: absolute;
@@ -452,11 +445,11 @@ footer {
         padding: 1rem;
         z-index: 100;
     }
-    
+
     nav.active {
         display: flex;
     }
-    
+
     nav button {
         width: 100%;
         margin: 0.5rem 0;
@@ -464,198 +457,91 @@ footer {
         padding: 0.7rem;
         font-size: 1rem;
     }
-    
-    /* Reduce the margin-top for the hero section */
+
     .hero {
-        margin-top: 50px; /* Reduced from 60px */
+        margin-top: 10px; /* Reduced from 60px */
         height: 40vh; /* Reduced from 50vh to make the banner smaller */
         padding: 0;
     }
-    
+
     .hero-image {
         width: 100%;
         object-fit: contain;
     }
-    
-    /* Reduce padding for all sections */
+
     section {
         padding: 2rem 1rem; /* Reduced from 4rem 2rem */
     }
-    
-    /* Reduce padding and margin for the mayor-candidate section */
+
     .mayor-candidate-container {
         padding: 0 1rem;
-        margin-top: 0; /* Ensure no extra margin */
+        margin-top: 0;
     }
-    
+
     #mayor-candidate {
         padding-top: 10px; /* Reduced from 20px */
         margin-top: 0;
     }
-    
+
     .section-title {
         margin: 10px 0; /* Reduced from 15px 0 */
         font-size: 2rem;
     }
-    
+
     .council-candidates {
         grid-template-columns: 1fr;
         padding: 0 1rem;
     }
-    
+
     .candidate-card.featured {
         transform: scale(1);
         max-width: 100%;
     }
-    
+
     .candidate-image {
         max-height: 250px;
     }
-    
+
     .candidate-card.featured .candidate-image {
         max-height: 300px;
     }
-    
+
     .candidate-info p {
         font-size: 0.9rem;
         max-height: 100px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
-    
-    .contact-container {
-        padding: 1.5rem;
-    }
-    
+
     .footer-content {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .footer-logo-section {
         justify-content: center;
     }
-    
+
     .footer-info p {
         justify-content: center;
         font-size: 1.1rem;
     }
-    
+
     .social-section {
         align-items: center;
     }
-    
+
     .social-icon {
         width: 50px;
         height: 50px;
         font-size: 1.8rem;
     }
-    
+
     .copyright {
         font-size: 1rem;
     }
-    
+
     .candidate-info h3 {
         font-size: 1.2rem;
-    }
-}
-
-/* Mobile-first styles */
-@media screen and (max-width: 768px) {
-    /* Adjust header spacing */
-    header {
-        padding: 10px 0;
-        margin-bottom: 0;
-    }
-
-    /* Adjust hero section spacing */
-    .hero {
-        margin: 0;
-        padding: 0;
-        margin-top: 50px; /* Ensure consistency */
-    }
-
-    .hero-image {
-        margin-bottom: 0;
-    }
-
-    /* Adjust mayor candidate section spacing */
-    #mayor-candidate {
-        padding-top: 10px;
-        margin-top: 0;
-    }
-
-    .section-title {
-        margin: 10px 0;
-    }
-
-    .mayor-candidate-container {
-        padding: 0 10px;
-    }
-
-    .logo-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .nav-menu {
-        display: none;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background: white;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .nav-menu.active {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .nav-menu button {
-        width: 100%;
-        padding: 15px;
-        border: none;
-        border-bottom: 1px solid #eee;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .council-candidates {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .candidate-card {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .contact-container {
-        width: 90%;
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .social-section {
-        margin-top: 20px;
-    }
-}
-
-/* Desktop styles */
-@media screen and (min-width: 769px) {
-    .menu-toggle {
-        display: none;
-    }
-
-    .nav-menu {
-        display: flex !important;
     }
 }
