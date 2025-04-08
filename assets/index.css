@@ -398,6 +398,7 @@ footer {
     font-size: 0.9rem;
 }
 
+
 /* ====================================
    8. MEDIA QUERIES - RESPONSIVE DESIGN
    ==================================== */
@@ -405,15 +406,14 @@ footer {
 /* Dispositivos móviles */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        padding: 0.5rem;
-        align-items: flex-start;
+        flex-direction: row; /* Mantener en fila para alinear logo y botón hamburguesa */
+        padding: 0.5rem 1rem;
+        align-items: center;
     }
 
     .logo-container {
-        margin-bottom: 0.5rem;
-        width: 100%;
-        justify-content: space-between;
+        margin-bottom: 0;
+        width: auto;
     }
 
     .logo {
@@ -434,69 +434,96 @@ footer {
         z-index: 101;
     }
 
-    nav {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+    /* Corregir selector para que coincida con el HTML (.nav-menu en lugar de nav) */
+    .nav-menu {
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%; /* Empezar fuera de la pantalla */
+        width: 70%; /* Ancho del menú lateral */
+        height: 100vh;
         background-color: #1a2a6c;
         flex-direction: column;
-        padding: 1rem;
+        padding: 4rem 1rem 1rem;
         z-index: 100;
+        transition: right 0.3s ease; /* Animación suave */
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
     }
 
-    nav.active {
-        display: flex;
+    .nav-menu.active {
+        right: 0; /* Mover a la vista cuando está activo */
     }
 
-    nav button {
+    .nav-menu button {
         width: 100%;
         margin: 0.5rem 0;
-        text-align: center;
+        text-align: left;
         padding: 0.7rem;
         font-size: 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Overlay para cuando el menú está abierto */
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 90;
+        display: none;
+    }
+
+    .menu-overlay.active {
+        display: block;
     }
 
     .hero {
-        margin-top: 10px; /* Reduced from 60px */
-        height: 40vh; /* Reduced from 50vh to make the banner smaller */
-        padding: 0;
+        margin-top: 0px; /* Ajustar al header fijo */
+        margin-bottom: 0; /* o 0.5rem si querés un pequeño espacio */
+        height: auto; 
+        min-height: 40vh;
+        padding: 1rem 1rem 0.5rem 1rem;
     }
 
     .hero-image {
         width: 100%;
+        height: auto;
         object-fit: contain;
     }
 
     section {
-        padding: 2rem 1rem; /* Reduced from 4rem 2rem */
-    }
-
-    .mayor-candidate-container {
-        padding: 0 1rem;
-        margin-top: 0;
-    }
-
-    #mayor-candidate {
-        padding-top: 10px; /* Reduced from 20px */
-        margin-top: 0;
+        padding: 2rem 1rem;
     }
 
     .section-title {
-        margin: 10px 0; /* Reduced from 15px 0 */
-        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        font-size: 1.8rem;
     }
+
+    /* Ajustar estructura de la sección de candidatos */
+    .mayor-candidate-container {
+        padding: 0;
+    }
+
+    #mayor-candidate {
+    margin-top: 0.5rem; /* Ajustalo según veas en pantalla */
+}
+
 
     .council-candidates {
         grid-template-columns: 1fr;
-        padding: 0 1rem;
+        gap: 1.5rem;
+        padding: 0;
     }
 
     .candidate-card.featured {
-        transform: scale(1);
+        transform: none;
+        padding: 0;
         max-width: 100%;
     }
+
 
     .candidate-image {
         max-height: 250px;
@@ -506,16 +533,39 @@ footer {
         max-height: 300px;
     }
 
-    .candidate-info p {
-        font-size: 0.9rem;
-        max-height: 100px;
-        overflow: hidden;
-        text-overflow: ellipsis;
+    .candidate-info {
+        padding: 1rem;
     }
 
+    .candidate-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .candidate-info p {
+        font-size: 0.9rem;
+        max-height: none; /* Eliminar límite de altura para mostrar texto completo */
+        overflow: visible;
+    }
+
+    /* Ajustar formulario de contacto */
+    .contact-container {
+        padding: 1.5rem;
+    }
+
+    form input, form textarea {
+        padding: 0.7rem;
+    }
+
+    /* Footer responsivo */
     .footer-content {
         flex-direction: column;
-        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .footer-logo-section {
@@ -524,24 +574,40 @@ footer {
 
     .footer-info p {
         justify-content: center;
-        font-size: 1.1rem;
     }
 
     .social-section {
         align-items: center;
     }
 
-    .social-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.8rem;
+    .social-icons {
+        justify-content: center;
     }
 
     .copyright {
-        font-size: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .logo-text .main-text {
+        font-size: 16px;
+    }
+
+    .logo-text .sub-text {
+        font-size: 10px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
     }
 
     .candidate-info h3 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+
+    .candidate-info p {
+        font-size: 0.85rem;
     }
 }
