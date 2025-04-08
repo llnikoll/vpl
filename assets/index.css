@@ -480,7 +480,7 @@ footer {
     }
 
     .hero {
-        margin-top: 0px; /* Ajustar al header fijo */
+        margin-top: 10px; /* Ajustar al header fijo */
         margin-bottom: 0; /* o 0.5rem si querés un pequeño espacio */
         height: auto; 
         min-height: 40vh;
