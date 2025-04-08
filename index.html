@@ -22,7 +22,8 @@
         <nav>
             <button onclick="scrollToSection('hero')">Inicio</button>
             <button onclick="openStatutes()">Estatuto</button>
-            <button onclick="scrollToSection('candidates')">Candidatos</button>
+            <button onclick="scrollToSection('mayor-candidate')">Candidato a Intendente</button>
+            <button onclick="scrollToSection('council-candidates')">Concejales</button>
             <button onclick="scrollToSection('contact')">Contacto</button>
         </nav>
     </header>
@@ -32,57 +33,57 @@
         <img src="images/Banner.jpg" alt="Sé proponente desde tu celular - Partido de la Libertad" class="hero-image">
     </section>
 
-    <!-- Sección de candidatos con Nicolás Oviedo destacado y centrado -->
-    <section id="candidates">
-        <h2 class="section-title">Nuestros Candidatos</h2>
-        <div class="candidates">
-            <!-- Candidato Principal (destacado y centrado) -->
+    <!-- Sección del Candidato a Intendente -->
+    <section id="mayor-candidate">
+        <h2 class="section-title">Candidato a Intendente</h2>
+        <div class="mayor-candidate-container">
             <div class="candidate-card featured">
-                <img src="images/Niko.png" alt="Candidato Principal" class="candidate-image">
+                <img src="images/Niko.png" alt="Candidato a Intendente" class="candidate-image">
                 <div class="candidate-info">
                     <h3>Ing. Nicolás Oviedo</h3>
                     <p>Pre-Candidato a la Intendencia. Economista con amplia experiencia en gestión pública y desarrollo social. Su visión de país se centra en la igualdad de oportunidades y el crecimiento sostenible.</p>
                 </div>
             </div>
-            
-            <!-- Resto de candidatos en orden secundario -->
+        </div>
+    </section>
+
+    <!-- Sección de Candidatos a Concejales -->
+    <section id="council-candidates">
+        <h2 class="section-title">Candidatos a Concejales</h2>
+        <div class="council-candidates">
             <div class="candidate-card">
-                <img src="images/Noemi.png" alt="Candidato 2" class="candidate-image">
+                <img src="images/Noemi.png" alt="Candidata a Concejala" class="candidate-image">
                 <div class="candidate-info">
                     <h3>Abog. Noemí Rodríguez</h3>
-                    <p>Candidata a la consejalía. Abogada especializada en derechos humanos y política internacional. Defensora de la transparencia gubernamental y la lucha contra la corrupción.</p>
+                    <p>Candidata a la concejalía. Abogada especializada en derechos humanos y política internacional. Defensora de la transparencia gubernamental y la lucha contra la corrupción.</p>
                 </div>
             </div>
-            
             <div class="candidate-card">
-                <img src="images/Jhonny.png" alt="Candidato 3" class="candidate-image">
+                <img src="images/Jhonny.png" alt="Candidato a Concejal" class="candidate-image">
                 <div class="candidate-info">
                     <h3>(Jhony) Augusto Romero</h3>
-                    <p>Candidato a la consejalía. Ingeniero ambiental con experiencia en políticas de sostenibilidad. Comprometido con la acción climática y la protección de los recursos naturales.</p>
+                    <p>Candidato a la concejalía. Ingeniero ambiental con experiencia en políticas de sostenibilidad. Comprometido con la acción climática y la protección de los recursos naturales.</p>
                 </div>
             </div>
-            
             <div class="candidate-card">
-                <img src="images/Oscar.png" alt="Candidato 4" class="candidate-image">
+                <img src="images/Oscar.png" alt="Candidato a Concejal" class="candidate-image">
                 <div class="candidate-info">
                     <h3>Oscar González</h3>
-                    <p>Candidato a la consejalía. Médico dedicado a mejorar el sistema de salud pública. Su prioridad es garantizar el acceso universal a servicios médicos de calidad.</p>
+                    <p>Candidato a la concejalía. Médico dedicado a mejorar el sistema de salud pública. Su prioridad es garantizar el acceso universal a servicios médicos de calidad.</p>
                 </div>
             </div>
-            
             <div class="candidate-card">
-                <img src="images/Ruben.png" alt="Candidato 5" class="candidate-image">
+                <img src="images/Ruben.png" alt="Candidato a Concejal" class="candidate-image">
                 <div class="candidate-info">
-                    <h3>Ruben Dario Franco</h3>
-                    <p>Candidato a la consejalía. Sociólogo especializado en desarrollo urbano y planificación territorial. Busca la integración efectiva de las comunidades rurales y urbanas.</p>
+                    <h3>Rubén Darío Franco</h3>
+                    <p>Candidato a la concejalía. Sociólogo especializado en desarrollo urbano y planificación territorial. Busca la integración efectiva de las comunidades rurales y urbanas.</p>
                 </div>
             </div>
-            
             <div class="candidate-card">
-                <img src="images/candidato6.jpg" alt="Candidato 6" class="candidate-image">
+                <img src="images/candidato6.jpg" alt="Candidato a Concejal" class="candidate-image">
                 <div class="candidate-info">
                     <h3>Joselo González</h3>
-                    <p>Candidato a la consejalía. Empresario con enfoque en la economía social y solidaria. Propone iniciativas para el emprendimiento local y la generación de empleo.</p>
+                    <p>Candidato a la concejalía. Empresario con enfoque en la economía social y solidaria. Propone iniciativas para el emprendimiento local y la generación de empleo.</p>
                 </div>
             </div>
         </div>
@@ -115,9 +116,8 @@
                 <p><i class="fas fa-map-marker-alt"></i> Av. Constitución #123, Centro</p>
                 <p><i class="fas fa-city"></i> Ciudad Capital, CP 12345</p>
                 <p><i class="fas fa-phone"></i> Tel: (123) 456-7890</p>
-                <p><i class="fas fa-envelope"></i> Email: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="15c3b333a153c53427213c313a253a393c213c363a7b3a2732">[email&#160;protected]</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@vpl.org">[email protected]</a></p>
             </div>
-            
             <div class="social-section">
                 <h3 class="social-title">Síguenos en redes</h3>
                 <div class="social-icons">
@@ -133,8 +133,6 @@
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
     <script src="assets/index.js"></script>
-    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d34af82d5b9934',t:'MTc0NDEzMTMzMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
 </body>
 </html>

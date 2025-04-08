@@ -143,28 +143,29 @@ section {
 /* ====================================
    5. SECCIÓN DE CANDIDATOS
    ==================================== */
-.candidates {
+section#mayor-candidate, section#council-candidates {
+    padding: 4rem 2rem;
+}
+
+.mayor-candidate-container {
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Centrar todo el contenido */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.council-candidates {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Contenedor secundario para candidatos no destacados */
-.candidates .secondary-candidates {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    width: 100%;
-}
-
-/* Estilos para destacar al candidato principal (centrado) */
 .candidate-card.featured {
     width: 100%;
-    max-width: 600px; /* Ancho máximo para el candidato destacado */
-    margin: 0 auto; /* Centrar horizontalmente */
+    max-width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,7 +185,6 @@ section {
     color: #1a2a6c;
 }
 
-/* Estilos generales para las tarjetas de candidatos */
 .candidate-card {
     background-color: white;
     border-radius: 10px;
@@ -396,7 +396,7 @@ footer {
 
 /* Tablets y dispositivos medianos */
 @media (max-width: 992px) {
-    .candidates .secondary-candidates {
+    .council-candidates {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -455,6 +455,14 @@ footer {
         object-fit: contain;
     }
     
+    .mayor-candidate-container {
+        padding: 0 1rem;
+    }
+    .council-candidates {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+    
     .candidate-card.featured {
         transform: scale(1);
         max-width: 100%;
@@ -462,17 +470,14 @@ footer {
     .candidate-image {
         max-height: 250px;
     }
+    .candidate-card.featured .candidate-image {
+        max-height: 300px;
+    }
     .candidate-info p {
         font-size: 0.9rem;
         max-height: 100px;
         overflow: hidden;
         text-overflow: ellipsis;
-    }
-    .candidate-card.featured .candidate-image {
-        max-height: 300px;
-    }
-    .candidates .secondary-candidates {
-        grid-template-columns: 1fr;
     }
     
     .footer-content {
