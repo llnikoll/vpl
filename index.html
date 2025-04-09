@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partido Político</title>
+    <link rel="stylesheet" href="assets/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Encabezado principal con logo, botón hamburguesa y navegación -->
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Logo del Partido" class="logo">
+            <div class="logo-text">
+                <span class="main-text">VPL CAPIATÁ</span>
+                <span class="sub-text">PARTIDO DE LA LIBERTAD</span>
+            </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <nav class="nav-menu">
+            <button onclick="scrollToSection('hero')">Inicio</button>
+            <button onclick="openStatutes()">Estatuto</button>
+            <button onclick="scrollToSection('mayor-candidate')">Candidato a Intendente</button>
+            <button onclick="scrollToSection('council-candidates')">Concejales</button>
+            <button onclick="scrollToSection('contact')">Contacto</button>
+        </nav>
+    </header>
+
+    <!-- Sección Hero/Banner principal -->
+    <section class="hero" id="hero">
+        <img src="images/Banner.jpg" alt="Sé proponente desde tu celular - Partido de la Libertad" class="hero-image">
+    </section>
+
+    <!-- Sección del Candidato a Intendente -->
+    <section id="mayor-candidate">
+        <h2 class="section-title">Candidato a Intendente</h2>
+        <div class="mayor-candidate-container">
+            <div class="candidate-card featured">
+                <img src="images/Niko.png" alt="Candidato a Intendente" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Ing. Nicolás Oviedo</h3>
+                    <p>Pre-Candidato a la Intendencia. Economista con amplia experiencia en gestión pública y desarrollo social. Su visión de país se centra en la igualdad de oportunidades y el crecimiento sostenible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Candidatos a Concejales -->
+    <section id="council-candidates">
+        <h2 class="section-title">Candidatos a Concejales</h2>
+        <div class="council-candidates">
+            <div class="candidate-card">
+                <img src="images/Noemi.png" alt="Candidata a Concejala" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Abog. Noemí Rodríguez</h3>
+                    <p>Candidata a la concejalía. Abogada especializada en derechos humanos y política internacional. Defensora de la transparencia gubernamental y la lucha contra la corrupción.</p>
+                </div>
+            </div>
+            <div class="candidate-card">
+                <img src="images/Jhonny.png" alt="Candidato a Concejal" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>(Jhony) Augusto Romero</h3>
+                    <p>Candidato a la concejalía. Ingeniero ambiental con experiencia en políticas de sostenibilidad. Comprometido con la acción climática y la protección de los recursos naturales.</p>
+                </div>
+            </div>
+            <div class="candidate-card">
+                <img src="images/Oscar.png" alt="Candidato a Concejal" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Oscar González</h3>
+                    <p>Candidato a la concejalía. Médico dedicado a mejorar el sistema de salud pública. Su prioridad es garantizar el acceso universal a servicios médicos de calidad.</p>
+                </div>
+            </div>
+            <div class="candidate-card">
+                <img src="images/Ruben.png" alt="Candidato a Concejal" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Rubén Darío Franco</h3>
+                    <p>Candidato a la concejalía. Sociólogo especializado en desarrollo urbano y planificación territorial. Busca la integración efectiva de las comunidades rurales y urbanas.</p>
+                </div>
+            </div>
+            <div class="candidate-card">
+                <img src="images/candidato6.jpg" alt="Candidato a Concejal" class="candidate-image">
+                <div class="candidate-info">
+                    <h3>Joselo González</h3>
+                    <p>Candidato a la concejalía. Empresario con enfoque en la economía social y solidaria. Propone iniciativas para el emprendimiento local y la generación de empleo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto con formulario -->
+    <section id="contact">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+                <input type="text" name="from_name" placeholder="Nombre completo" required>
+                <input type="email" name="to_name" placeholder="Correo electrónico" required>
+                <textarea name="message" placeholder="Escribe tu mensaje aquí" required></textarea>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Pie de página con información de contacto y redes sociales -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo-section">
+                    <img src="images/logo.png" alt="Logo del Partido" class="footer-logo">
+                    <div class="footer-logo-text">
+                        <span class="main-text">VPL</span>
+                        <span class="sub-text">PARTIDO DE LA LIBERTAD</span>
+                    </div>
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Constitución #123, Centro</p>
+                <p><i class="fas fa-city"></i> Ciudad Capital, CP 12345</p>
+                <p><i class="fas fa-phone"></i> Tel: (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@vpl.org">[email protected]</a></p>
+            </div>
+            <div class="social-section">
+                <h3 class="social-title">Síguenos en redes</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 VPL - Partido de la Libertad. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="assets/index.js"></script>
+</body>
+</html>
