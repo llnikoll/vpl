@@ -70,6 +70,13 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.style.overflow = '';
         });
     });
+
+    // Detectar anclaje en la URL al cargar la página
+    const hash = window.location.hash; // Obtiene el anclaje (ej. #hero)
+    if (hash) {
+        const sectionId = hash.substring(1); // Elimina el # (ej. hero)
+        scrollToSection(sectionId); // Desplaza a la sección
+    }
 });
 
 /**

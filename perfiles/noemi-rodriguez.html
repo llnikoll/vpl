@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abog. Noemí Rodríguez - Partido de la Libertad</title>
+    <link rel="stylesheet" href="../perfiles-css/noemi.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado principal con logo, botón hamburguesa y navegación -->
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.png" alt="Logo del Partido" class="logo">
+            <div class="logo-text">
+                <span class="main-text">VPL CAPIATÁ</span>
+                <span class="sub-text">PARTIDO DE LA LIBERTAD</span>
+            </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <nav class="nav-menu">
+            <button onclick="window.location.href='../index.html#hero'">Inicio</button>
+            <button onclick="openStatutes()">Estatuto</button>
+            <button onclick="window.location.href='../index.html#mayor-candidate'">Candidato a Intendente</button>
+            <button onclick="window.location.href='../index.html#council-candidates'">Concejales</button>
+            <button onclick="scrollToSection('contact')">Contacto</button>
+        </nav>
+    </header>
+
+    <!-- Contenido principal de la candidata -->
+    <main>
+        <section class="candidate-profile">
+            <h1 class="section-title">Abog. Noemí Rodríguez</h1>
+            <div class="candidate-details">
+                <img src="../images/Noemi.png" alt="Abog. Noemí Rodríguez" class="candidate-image">
+                <div class="candidate-content">
+                    <h2>PRECANDIDATA A CONCEJALÍA DE CAPIATÁ</h2>
+                    <h3>Formación Académica</h3>
+                    <ul>
+                        <li>Abogada por la Universidad Nacional de Asunción, con especialización en Derecho Penal y Procesal Penal por la Universidad Americana.</li>
+                        <li>Magíster en Derecho Penal, con enfoque en el derecho procesal.</li>
+                        <li>Especialista en Inteligencia Estratégica por el Instituto de Altos Estudios Estratégicos (IAEE).</li>
+                        <li>Diplomado Internacional en Criminalística por la Universidad del Plata, con un enfoque profundo en la seguridad pública.</li>
+                        <li>Instructora en Derechos Humanos por las Naciones Unidas, comprometida con la promoción y defensa de los derechos fundamentales.</li>
+                        <li>Licenciada en Enfermería, con especialización en Salud Pública y Administración Hospitalaria, enfocada en mejorar el bienestar de la comunidad.</li>
+                    </ul>
+                    <h3>Compromiso y Visión</h3>
+                    <p>Con una sólida formación académica y una amplia experiencia en diversas áreas, Abog. Noemí Rodríguez está preparada para llevar a Capiatá hacia un futuro de desarrollo integral. Su compromiso con la justicia, la seguridad, la salud y la educación la posicionan como una líder capaz de generar cambios significativos para el bienestar de todos los capiateños.</p>
+                    <h3>Propuestas de Gobierno</h3>
+                    <ul>
+                        <li><strong>Infraestructura para el desarrollo:</strong> Impulsar la construcción y mantenimiento de calles para mejorar la conectividad y accesibilidad en todo Capiatá.</li>
+                        <li><strong>Seguridad ciudadana:</strong> Fortalecer la prevención del delito, promoviendo la instalación de cámaras de seguridad y mejorando la iluminación de los espacios públicos para crear un entorno más seguro para todos.</li>
+                        <li><strong>Espacios verdes y recreativos:</strong> Crear parques, plazas y áreas deportivas que fomenten el esparcimiento y el bienestar de las familias, promoviendo una vida saludable y activa.</li>
+                        <li><strong>Apoyo a emprendedores locales:</strong> Implementar programas de apoyo a los emprendedores y pequeños negocios de Capiatá, impulsando la creación de empleo y el desarrollo económico local.</li>
+                        <li><strong>Transparencia y participación ciudadana:</strong> Promover una administración transparente y abierta, incentivando la participación activa de los ciudadanos en las decisiones importantes que afectan a la comunidad.</li>
+                        <li><strong>Salud y bienestar:</strong> Mejorar los servicios de salud, asegurando que todos los capiateños tengan acceso a una atención digna y de calidad, con especial enfoque en la prevención y el cuidado integral de la salud.</li>
+                        <li><strong>Educación y cultura:</strong> Desarrollar proyectos educativos y culturales que fomenten el crecimiento integral de nuestros niños y jóvenes, brindándoles las herramientas necesarias para un futuro mejor, y promoviendo el acceso a una educación de calidad.</li>
+                    </ul>
+                    <p><strong>Juntos, podemos construir un futuro donde la esperanza y el progreso sean una realidad y no solo un sueño para todos.</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página con información de contacto y redes sociales -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo-section">
+                    <img src="../images/logo.png" alt="Logo del Partido" class="footer-logo">
+                    <div class="footer-logo-text">
+                        <span class="main-text">VPL</span>
+                        <span class="sub-text">PARTIDO DE LA LIBERTAD</span>
+                    </div>
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Constitución #123, Centro</p>
+                <p><i class="fas fa-city"></i> Ciudad Capital, CP 12345</p>
+                <p><i class="fas fa-phone"></i> Tel: (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="/cdn-cgi/l/email-protection#7f161119103f090f1351100d18">[email protected]</a></p>
+            </div>
+            <div class="social-section">
+                <h3 class="social-title">Síguenos en redes</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 VPL - Partido de la Libertad. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="../assets/index.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d70e0cfbd7c009',t:'MTc0NDE3MDc3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92d712151e3244d8',t:'MTc0NDE3MDk0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
