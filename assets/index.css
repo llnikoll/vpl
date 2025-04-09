@@ -1,521 +1,510 @@
-/**
- * ÍNDICE DEL CSS
- * 
- * 1. RESET Y ESTILOS GENERALES
- * 2. ENCABEZADO Y NAVEGACIÓN
- * 3. SECCIÓN HERO
- * 4. ESTRUCTURA DE SECCIONES
- * 5. SECCIÓN DE CANDIDATOS
- * 6. SECCIÓN DE CONTACTO
- * 7. PIE DE PÁGINA
- * 8. MEDIA QUERIES - RESPONSIVE DESIGN
- */
-
-/* ====================================
-   1. RESET Y ESTILOS GENERALES
-   ==================================== */
-   * {
+/* Estilos base y variables */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --border-radius: 8px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-}
-
-body {
-    background-color: #f5f5f5;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-}
-
-/* ====================================
-   2. ENCABEZADO Y NAVEGACIÓN
-   ==================================== */
-header {
-    background-color: #1a2a6c;
-    color: white;
-    padding: 1rem;
-    position: fixed;
-    width: 100%;
+    color: var(--dark-color);
+    background-color: #f9f9f9;
+    overflow-x: hidden;
+  }
+  
+  /* Encabezado y navegación */
+  header {
+    position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    background-color: white;
+    box-shadow: var(--shadow);
+    padding: var(--spacing-md);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.logo-container {
+    transition: var(--transition);
+  }
+  
+  .logo-container {
     display: flex;
     align-items: center;
-    gap: 1rem;
-}
-
-.logo {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-}
-
-.logo-text {
+  }
+  
+  .logo {
+    width: 50px;
+    height: auto;
+    margin-right: var(--spacing-md);
+  }
+  
+  .logo-text {
     display: flex;
     flex-direction: column;
-}
-
-.logo-text .main-text {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.logo-text .sub-text {
-    font-size: 14px;
-    color: #ffffff;
-}
-
-nav {
-    display: flex;
-    gap: 1rem;
-}
-
-nav button {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s;
-}
-
-nav button:hover {
-    background-color: rgb(15, 3, 90);
-    color: #ffffff;
-}
-
-.menu-toggle {
-    display: none; /* Oculto por defecto en pantallas grandes */
+  }
+  
+  .main-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  .sub-text {
+    font-size: 0.8rem;
+    color: var(--secondary-color);
+  }
+  
+  .menu-toggle {
+    display: none;
     background: none;
     border: none;
-    color: white;
-    font-size: 1.8rem; /* Tamaño para mayor visibilidad */
-    cursor: pointer;
-    padding: 0.5rem;
-    line-height: 1;
-}
-
-/* Aseguramos que el ícono sea visible */
-.menu-toggle i {
-    color: white; /* Color explícito para el ícono */
-}
-
-/* ====================================
-   3. SECCIÓN HERO
-   ==================================== */
-.hero {
-    margin-top: 100px;
-    width: 100%;
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero-image {
-    width: 85%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* ====================================
-   4. ESTRUCTURA DE SECCIONES
-   ==================================== */
-section {
-    padding: 4rem 2rem;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 3rem;
-    color: #1a2a6c;
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-
-/* ====================================
-   5. SECCIÓN DE CANDIDATOS
-   ==================================== */
-section#mayor-candidate, section#council-candidates {
-    padding: 4rem 2rem;
-}
-
-.mayor-candidate-container {
-    display: flex;
-    justify-content: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.council-candidates {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.candidate-card.featured {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(26, 42, 108, 0.05);
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(26, 42, 108, 0.2);
-    padding: 1rem;
-    border-radius: 10px;
-}
-
-.candidate-card.featured .candidate-image {
-    max-height: 450px;
-}
-
-.candidate-card.featured .candidate-info h3 {
     font-size: 1.5rem;
-    color: #1a2a6c;
-}
-
-.candidate-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    color: var(--primary-color);
+    cursor: pointer;
+  }
+  
+  .nav-menu {
     display: flex;
-    flex-direction: column;
-}
-
-.candidate-card:hover {
-    transform: translateY(-10px);
-}
-
-.candidate-image {
+    gap: var(--spacing-md);
+  }
+  
+  .nav-menu button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+  }
+  
+  .nav-menu button:hover {
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+  }
+  
+  /* Sección Hero */
+  .hero {
     width: 100%;
     height: auto;
-    max-height: 400px;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 8px 8px 0 0;
-    background-color: #f5f5f5;
-    padding: 10px;
-}
-
-.candidate-info {
-    padding: 1.5rem;
-    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Título de secciones */
+  .section-title {
+    text-align: center;
+    margin: var(--spacing-xl) 0 var(--spacing-lg);
+    color: var(--primary-color);
+    font-size: 2rem;
+    position: relative;
+    padding-bottom: var(--spacing-md);
+  }
+  
+  .section-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+  }
+  
+  /* Candidato a Intendente */
+  .mayor-candidate-container {
     display: flex;
-    flex-direction: column;
-}
-
-.candidate-info h3 {
-    margin-bottom: 0.5rem;
-    color: #1a2a6c;
-    font-size: 1.3rem;
-}
-
-.candidate-info p {
-    color: #555;
-    line-height: 1.6;
-    font-size: 1rem;
-}
-
-/* ====================================
-   6. SECCIÓN DE CONTACTO
-   ==================================== */
-.contact-container {
+    justify-content: center;
+    padding: 0 var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .candidate-card.featured {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
     background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-form {
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: var(--spacing-lg);
+    max-width: 800px;
     width: 100%;
+    transition: var(--transition);
+  }
+  
+  .candidate-card.featured:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .candidate-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: var(--spacing-lg);
+    border: 4px solid var(--secondary-color);
+  }
+  
+  .candidate-info h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  /* Candidatos a concejales */
+  .council-candidates {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    padding: 0 var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .candidate-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    text-align: center;
+    padding: var(--spacing-lg);
+  }
+  
+  .candidate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .council-candidates .candidate-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto var(--spacing-md);
+  }
+  
+  /* Sección de contacto */
+  .contact-container {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
+  }
+  
+  #contact-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-}
-
-form input, form textarea {
-    width: 100%;
-    padding: 0.8rem;
+    gap: var(--spacing-md);
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    padding: var(--spacing-md);
     border: 1px solid #ddd;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     font-size: 1rem;
-}
-
-form textarea {
+    transition: var(--transition);
+  }
+  
+  #contact-form input:focus,
+  #contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+  }
+  
+  #contact-form textarea {
     min-height: 150px;
     resize: vertical;
-}
-
-.submit-btn {
-    background-color: #1a2a6c;
+  }
+  
+  .submit-btn {
+    background-color: var(--secondary-color);
     color: white;
     border: none;
-    padding: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+    padding: var(--spacing-md);
     font-size: 1rem;
-    transition: background-color 0.3s;
-}
-
-.submit-btn:hover {
-    background-color: #0f1a45;
-}
-
-/* ====================================
-   7. PIE DE PÁGINA
-   ==================================== */
-footer {
-    background-color: #1a2a6c;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: var(--primary-color);
     color: white;
-    padding: 3rem 2rem;
-}
-
-.footer-content {
+    padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-md);
+  }
+  
+  .footer-content {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
     flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.footer-info {
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .footer-info {
     flex: 1;
     min-width: 250px;
-}
-
-.footer-logo-section {
+  }
+  
+  .footer-logo-section {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-.footer-logo {
-    height: 70px;
-    width: auto;
-    object-fit: contain;
-}
-
-.footer-logo-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-logo-text .main-text {
-    font-size: 22px;
-    font-weight: bold;
-    color: #ffffff;
-}
-
-.footer-logo-text .sub-text {
-    font-size: 14px;
-    color: #ffffff;
-}
-
-.footer-info p {
-    margin-bottom: 0.7rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-}
-
-.footer-info i {
-    width: 20px;
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .footer-logo {
+    width: 40px;
+    height: auto;
+    margin-right: var(--spacing-md);
+  }
+  
+  .footer-info p {
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .footer-info i {
+    margin-right: var(--spacing-sm);
+    color: var(--secondary-color);
+  }
+  
+  .footer-info a {
+    color: var(--light-color);
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .footer-info a:hover {
+    color: var(--secondary-color);
+  }
+  
+  .social-section {
+    flex: 1;
+    min-width: 250px;
     text-align: center;
-    color: #f5f5f5;
-}
-
-.social-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    min-width: 200px;
-}
-
-.social-title {
-    margin-bottom: 1rem;
+  }
+  
+  .social-title {
+    margin-bottom: var(--spacing-md);
     font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.social-icons {
+  }
+  
+  .social-icons {
     display: flex;
-    gap: 1.2rem;
-}
-
-.social-icon {
-    color: white;
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+    justify-content: center;
+    gap: var(--spacing-md);
+  }
+  
+  .social-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     background-color: rgba(255, 255, 255, 0.1);
-}
-
-.social-icon:hover {
-    transform: translateY(-5px);
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-.copyright {
-    width: 100%;
+    color: white;
+    border-radius: 50%;
+    text-decoration: none;
+    transition: var(--transition);
+  }
+  
+  .social-icon:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+  }
+  
+  .copyright {
     text-align: center;
-    margin-top: 2rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
-}
-
-
-/* ====================================
-   8. MEDIA QUERIES - RESPONSIVE DESIGN
-   ==================================== */
-   @media (max-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    .logo-text .main-text {
-        font-size: 18px;
-    }
-
-    .logo-text .sub-text {
-        font-size: 12px;
-    }
-
-    nav.nav-menu {
-        position: fixed;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background-color: #1a2a6c;
-        flex-direction: column;
-        align-items: center;
-        padding: 1.5rem 0;
-        display: none;
-    }
-
-    nav.nav-menu.active {
-        display: flex;
-    }
-
-    nav.nav-menu button {
-        width: 80%;
-        margin: 0.5rem 0;
-    }
-
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  /* Superposición del menú */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+  }
+  
+  .menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .section-title,
+  .candidate-card,
+  .contact-container {
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  /* Media queries para responsividad */
+  @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+      display: block;
     }
-
-    .hero {
-        height: 40vh;
-        margin-top: 50px;
-        padding: 0;
-        padding: 1rem;
+  
+    .nav-menu {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: 70%;
+      max-width: 300px;
+      background-color: white;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
     }
-
-    .hero-image {
-        width: 100%;
-        object-fit: contain;
+  
+    .nav-menu.active {
+      transform: translateX(0);
     }
-
-    .section-title {
-        font-size: 2rem;
+  
+    .nav-menu button {
+      width: 100%;
+      padding: var(--spacing-md);
+      text-align: center;
     }
-
-    .mayor-candidate-container {
-        padding: 0 1rem;
-        margin-top: 0; /* Ensure no extra margin */
-    }
-
-    .council-candidates {
-        flex-direction: column;
-        gap: 2rem;
-        padding: 0;
-    }
-
+  
     .candidate-card.featured {
-        transform: none;
-        width: 100%;
+      flex-direction: column;
+      text-align: center;
     }
-
-    .candidate-info h3 {
-        font-size: 1.2rem;
+  
+    .candidate-card.featured .candidate-image {
+      margin: 0 auto var(--spacing-md);
     }
-
-    .contact-container {
-        padding: 1.5rem;
+  
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
     }
-
-    footer .footer-content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .footer-info,
-    .social-section {
-        width: 100%;
-        text-align: center;
-    }
-
+  
     .footer-logo-section {
-        justify-content: center;
+      justify-content: center;
     }
-
-    .social-icons {
-        justify-content: center;
+  
+    .footer-info p {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-info i {
+      margin-bottom: var(--spacing-sm);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo-text .main-text {
+      font-size: 1rem;
     }
     
-    .menu-overlay.active {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        width: 100vw;
-        background-color: rgba(0, 0, 0, 0.6);
-        z-index: 99;
+    .logo-text .sub-text {
+      font-size: 0.7rem;
     }
-
-    .menu-overlay {
-        display: none;
+  
+    .section-title {
+      font-size: 1.5rem;
     }
-
-    .menu-overlay.active {
-        display: block;
+  
+    .candidate-image {
+      width: 100px;
+      height: 100px;
     }
-}
+  
+    .council-candidates {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* Mejoras de accesibilidad */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+  
+  /* Modo oscuro (opcional) */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --light-color: #34495e;
+      --dark-color: #ecf0f1;
+    }
+    
+    body {
+      background-color: #1a1a1a;
+      color: var(--dark-color);
+    }
+    
+    header {
+      background-color: #222;
+    }
+    
+    .nav-menu button {
+      color: var(--dark-color);
+    }
+    
+    .candidate-card, 
+    .candidate-card.featured {
+      background-color: #2c2c2c;
+      color: #ddd;
+    }
+    
+    #contact-form input,
+    #contact-form textarea {
+      background-color: #333;
+      color: #ddd;
+      border-color: #444;
+    }
+  }
