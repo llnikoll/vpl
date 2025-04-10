@@ -7,12 +7,12 @@
  * - Toggle para el menú hamburguesa mejorado
  */
 
-// Inicializar EmailJS con la clave pública
-(function() {
-    emailjs.init("11w83xZg0PuZCavgl");
-})();
-
 document.addEventListener('DOMContentLoaded', function() {
+    /**
+     * Inicializar EmailJS con la clave pública
+     */
+    emailjs.init("11w83xZg0PuZCavgl");
+    
     /**
      * Manejador de eventos para el formulario de contacto
      */
@@ -20,12 +20,37 @@ document.addEventListener('DOMContentLoaded', function() {
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            emailjs.sendForm('service_u215hne', 'template_guziqqn', this)
-                .then(function() {
+            
+            // Mostrar indicador de carga
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Enviando...';
+            submitBtn.disabled = true;
+            
+            // Crear objeto de parámetros para el template
+            const templateParams = {
+                from_name: this.querySelector('[name="from_name"]').value,
+                reply_to: this.querySelector('[name="to_name"]').value,
+                message: this.querySelector('[name="message"]').value
+            };
+            
+            // Enviar el formulario
+            emailjs.send('service_u215hne', 'template_guziqqn', templateParams)
+                .then(function(response) {
+                    console.log('SUCCESS!', response.status, response.text);
                     alert('¡Mensaje enviado con éxito!');
                     contactForm.reset();
+                    
+                    // Restaurar botón
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
                 }, function(error) {
-                    alert('Error al enviar el mensaje: ' + error);
+                    console.error('Error al enviar el mensaje:', error);
+                    alert('Error al enviar el mensaje: ' + JSON.stringify(error));
+                    
+                    // Restaurar botón
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
                 });
         });
     }

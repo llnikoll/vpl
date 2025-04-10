@@ -160,7 +160,7 @@ header {
     text-align: center;
     margin: var(--spacing-xl) 0 var(--spacing-lg);
     color: var(--primary-color);
-    font-size: 2rem;
+    font-size: 3rem;
     position: relative;
     padding-bottom: var(--spacing-md);
 }
