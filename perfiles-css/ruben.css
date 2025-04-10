@@ -189,7 +189,7 @@ header {
 }
 
 /* ==========================================================================
-   4. Contenido principal del candidato
+   4. Contenido principal de la candidata
    ========================================================================== */
 .candidate-profile {
     padding: var(--spacing-xl) var(--spacing-lg);
@@ -201,7 +201,7 @@ header {
 .candidate-image {
     width: 200px;
     height: 200px;
-    object-fit: cover;
+    object-fit: contain;
     margin: 0 auto var(--spacing-lg);
     display: block;
 }
