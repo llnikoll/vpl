@@ -168,6 +168,17 @@ header {
     overflow: hidden;
 }
 
+
+.hero a {
+    display: block; /* Asegura que el enlace ocupe todo el espacio de la imagen */
+    transition: opacity 0.3s ease;
+}
+
+.hero a:hover {
+    opacity: 0.9; /* Efecto de opacidad al pasar el mouse */
+}
+
+
 .hero-image {
     /* Imagen principal, ajustada al contenedor */
     width: 100%;
