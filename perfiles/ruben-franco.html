@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubén Darío Franco - Partido de la Libertad</title>
+    <link rel="stylesheet" href="../perfiles-css/ruben.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Encabezado principal con logo, botón hamburguesa y navegación -->
+    <header>
+        <div class="logo-container">
+            <img src="../images/logo.png" alt="Logo del Partido" class="logo">
+            <div class="logo-text">
+                <span class="main-text">VPL CAPIATÁ</span>
+                <span class="sub-text">PARTIDO DE LA LIBERTAD</span>
+            </div>
+        </div>
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <nav class="nav-menu">
+            <button onclick="window.location.href='../index.html'">Inicio</button>
+            <button onclick="openStatutes()">Estatuto</button>
+            <button onclick="window.location.href='../index-candidato-a-intendente.html'">Candidato a Intendente</button>
+            <button onclick="window.location.href='../index-candidato-a-concejales.html'">Concejales</button>
+            <button onclick="scrollToSection('contact')">Contacto</button>
+        </nav>
+    </header>
+
+    <!-- Contenido principal del candidato -->
+    <main>
+        <section class="candidate-profile">
+            <h1 class="section-title">Rubén Darío Franco</h1>
+            <div class="candidate-details">
+                <img src="../images/Ruben.png" alt="Rubén Darío Franco" class="candidate-image">
+                <div class="candidate-content">
+                    <h2>PRECANDIDATO A CONCEJALÍA DE CAPIATÁ</h2>
+                    <h3>Formación Académica</h3>
+                    <ul>
+                        <li>Licenciado en Tecnología de la Producción por la Facultad de Ciencias Exactas y Naturales (FACEN-UNA), con un enfoque en la optimización de procesos productivos y desarrollo sostenible.</li>
+                        <li>Técnico Superior Informático por el Instituto CEPEU, especializado en sistemas y tecnología de la información.</li>
+                        <li>Plomero, Electricista, Técnico en Acondicionadores de Aire y Mecánico de Motos, con certificaciones del Servicio Nacional de Promoción Profesional (SNPP), demostrando habilidades prácticas en múltiples oficios técnicos.</li>
+                        <li>Especialista en Didáctica Universitaria por la FACEN-UNA, comprometido con la formación de las nuevas generaciones mediante metodologías educativas innovadoras.</li>
+                    </ul>
+                    <h3>Perfil Personal</h3>
+                    <p>Rubén Darío Franco es un profesional multifacético cuya trayectoria refleja un compromiso inquebrantable con el desarrollo integral de las comunidades. Originario de Capiatá, Rubén creció en un entorno donde los valores de trabajo duro, perseverancia y servicio a los demás fueron fundamentales. Desde joven, mostró una inclinación por las ciencias y la tecnología, lo que lo llevó a estudiar Tecnología de la Producción en la Facultad de Ciencias Exactas y Naturales de la Universidad Nacional de Asunción (FACEN-UNA). Su formación técnica no se detuvo ahí: se certificó como Técnico Superior Informático en el Instituto CEPEU, lo que le permitió dominar herramientas digitales y sistemas que hoy aplica en sus propuestas de planificación urbana.</p>
+                    <p>Además de su formación académica, Rubén es un hombre de acción. Su experiencia como plomero, electricista, técnico en acondicionadores de aire y mecánico de motos, certificada por el SNPP, demuestra su capacidad para resolver problemas prácticos y su conexión con las necesidades cotidianas de la gente. Estas habilidades no solo le han dado un profundo entendimiento de las realidades técnicas y logísticas de su comunidad, sino que también lo han convertido en un referente para quienes buscan soluciones concretas y efectivas. Como docente con especialización en Didáctica Universitaria, Rubén ha impartido clases en instituciones locales, donde ha inspirado a estudiantes a perseguir sus sueños con disciplina y creatividad, fomentando una educación práctica y orientada al desarrollo comunitario.</p>
+                    <p>Rubén es conocido por su carácter empático y su habilidad para trabajar en equipo. A lo largo de su vida, ha participado en proyectos sociales y comunitarios, como la mejora de infraestructura básica en barrios vulnerables y la capacitación de jóvenes en oficios técnicos. Su visión como sociólogo especializado en desarrollo urbano y planificación territorial se centra en la integración efectiva de las comunidades rurales y urbanas, promoviendo un crecimiento equilibrado que beneficie a todos los capiateños. Para Rubén, el progreso no es solo una meta, sino un proceso colectivo que requiere escucha, innovación y compromiso.</p>
+                    <h3>Compromiso y Visión</h3>
+                    <p>Con una formación diversa que combina conocimientos técnicos, académicos y prácticos, Rubén Darío Franco está preparado para enfrentar los desafíos de Capiatá con soluciones integrales. Su experiencia en tecnología, planificación urbana y oficios técnicos le permite abordar problemas desde una perspectiva única, mientras que su rol como educador refuerza su compromiso con el desarrollo humano. Rubén busca construir un Capiatá más conectado, funcional y equitativo, donde la tecnología y la educación sean pilares para el progreso sostenible.</p>
+                    <h3>Propuestas de Gobierno</h3>
+                    <ul>
+                        <li><strong>Modernización urbana con tecnología:</strong> Implementar sistemas digitales para la planificación y gestión urbana, como mapas interactivos y plataformas para reportar problemas de infraestructura en tiempo real.</li>
+                        <li><strong>Infraestructura básica y sostenible:</strong> Mejorar el acceso a servicios básicos como agua potable, electricidad y alcantarillado en zonas rurales y urbanas, utilizando su experiencia técnica para garantizar soluciones duraderas.</li>
+                        <li><strong>Capacitación técnica para jóvenes:</strong> Crear programas de formación en oficios técnicos (electricidad, plomería, mecánica) para jóvenes, fomentando el empleo y el emprendimiento local.</li>
+                        <li><strong>Integración rural-urbana:</strong> Diseñar proyectos que conecten las zonas rurales y urbanas de Capiatá, mejorando caminos, transporte y acceso a servicios esenciales para reducir las brechas de desarrollo.</li>
+                        <li><strong>Eficiencia energética y sostenibilidad:</strong> Promover la instalación de sistemas de iluminación LED en espacios públicos y la capacitación en el uso eficiente de acondicionadores de aire para reducir el consumo energético.</li>
+                        <li><strong>Educación técnica y tecnológica:</strong> Establecer centros educativos que ofrezcan formación en tecnología y oficios, preparando a las nuevas generaciones para un mercado laboral competitivo.</li>
+                        <li><strong>Participación ciudadana en la planificación:</strong> Crear consejos comunitarios que trabajen junto a las autoridades para priorizar proyectos de infraestructura y desarrollo, asegurando que las necesidades de los ciudadanos sean escuchadas.</li>
+                    </ul>
+                    <p><strong>Con trabajo, tecnología y compromiso, construyamos un Capiatá más unido y próspero para todos.</strong></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página con información de contacto y redes sociales -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <div class="footer-logo-section">
+                    <img src="../images/logo.png" alt="Logo del Partido" class="footer-logo">
+                    <div class="footer-logo-text">
+                        <span class="main-text">VPL</span>
+                        <span class="sub-text">PARTIDO DE LA LIBERTAD</span>
+                    </div>
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Av. Constitución #123, Centro</p>
+                <p><i class="fas fa-city"></i> Ciudad Capital, CP 12345</p>
+                <p><i class="fas fa-phone"></i> Tel: (123) 456-7890</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="/cdn-cgi/l/email-protection#7f161119103f090f1351100d18">[email protected]</a></p>
+            </div>
+            <div class="social-section">
+                <h3 class="social-title">Síguenos en redes</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            © 2025 VPL - Partido de la Libertad. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <script src="../assets/index.js"></script>
+</body>
+</html>

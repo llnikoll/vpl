@@ -1,12 +1,9 @@
 /* ==========================================================================
-   Estilos para la página de perfil de candidato
+   Estilos para contacto.html - Partido de la Libertad
    ========================================================================== */
 
-/* ==========================================================================
-   1. Variables y Estilos Base (Igual que index.css)
-   ========================================================================== */
-   :root {
-    /* Define variables globales para colores, sombras, transiciones y espaciado */
+/* Variables y Estilos Base */
+:root {
     --primary-color: #2c3e50;    /* Color principal oscuro */
     --secondary-color: #3498db;  /* Color secundario azul */
     --accent-color: #e74c3c;     /* Color de acento rojo */
@@ -22,26 +19,23 @@
 }
 
 * {
-    /* Resetea márgenes, rellenos y usa border-box para un cálculo más predecible */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    /* Estilos base del cuerpo: fuente, espaciado de línea, colores y fondo */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: var(--dark-color);
     background-color: #f9f9f9;
-    overflow-x: hidden; /* Evita desbordamiento horizontal */
+    overflow-x: hidden;
 }
 
 /* ==========================================================================
-   2. Encabezado y Navegación (Actualizado para evitar subrayado y color lila)
+   Encabezado y Navegación
    ========================================================================== */
 header {
-    /* Estilos del encabezado: fijo en la parte superior con sombra */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -55,39 +49,33 @@ header {
 }
 
 .logo-container {
-    /* Contenedor del logo y texto, alineado horizontalmente */
     display: flex;
     align-items: center;
 }
 
 .logo {
-    /* Tamaño y espaciado del logo */
     width: 20px;
     height: auto;
     margin-right: var(--spacing-md);
 }
 
 .logo-text {
-    /* Contenedor del texto del logo, en columna */
     display: flex;
     flex-direction: column;
 }
 
 .main-text {
-    /* Texto principal del logo */
     font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary-color);
 }
 
 .sub-text {
-    /* Texto secundario del logo */
     font-size: 0.8rem;
     color: var(--secondary-color);
 }
 
 .menu-toggle {
-    /* Botón de menú hamburguesa, oculto por defecto */
     display: none;
     background: none;
     border: none;
@@ -97,12 +85,40 @@ header {
 }
 
 .nav-menu {
-    /* Menú de navegación, alineado horizontalmente */
     display: flex;
     gap: var(--spacing-md);
 }
 
-/* Estilos para los botones dentro de .nav-menu */
+/* Estilos para los enlaces <a> con clase .nav-link */
+.nav-menu .nav-link {
+    color: var(--primary-color);
+    font-size: 1rem;
+    cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    text-decoration: none; /* Elimina el subrayado */
+    outline: none; /* Elimina el contorno al hacer clic */
+}
+
+.nav-menu .nav-link:hover {
+    background-color: var(--light-color);
+    color: var(--secondary-color);
+    text-decoration: none; /* Asegura que no haya subrayado en hover */
+}
+
+.nav-menu .nav-link:visited {
+    color: var(--primary-color); /* Fuerza el color original incluso si se "visita" */
+    text-decoration: none; /* Elimina el subrayado para estado visitado */
+}
+
+.nav-menu .nav-link:active,
+.nav-menu .nav-link:focus {
+    color: var(--primary-color); /* Mantiene el color al hacer clic o enfocar */
+    text-decoration: none; /* Sin subrayado en activo o enfocado */
+}
+
+/* Estilos para el botón dentro de .nav-menu */
 .nav-menu button {
     background: none;
     border: none;
@@ -133,40 +149,14 @@ header {
     text-decoration: none; /* Sin subrayado en activo o enfocado */
 }
 
-/* Estilos para los enlaces <a> con clase .nav-link dentro de .nav-menu */
-.nav-menu .nav-link {
-    color: var(--primary-color);
-    font-size: 1rem;
-    cursor: pointer;
-    padding: var(--spacing-sm) var(--spacing-md);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
-    text-decoration: none; /* Elimina el subrayado */
-    outline: none; /* Elimina el contorno al hacer clic */
-}
-
-.nav-menu .nav-link:hover {
-    background-color: var(--light-color);
-    color: var(--secondary-color);
-    text-decoration: none; /* Asegura que no haya subrayado en hover */
-}
-
-.nav-menu .nav-link:visited {
-    color: var(--primary-color); /* Fuerza el color original incluso si se "visita" */
-    text-decoration: none; /* Elimina el subrayado para estado visitado */
-}
-
-.nav-menu .nav-link:active,
-.nav-menu .nav-link:focus {
-    color: var(--primary-color); /* Mantiene el color al hacer clic o enfocar */
-    text-decoration: none; /* Sin subrayado en activo o enfocado */
-}
-
 /* ==========================================================================
-   3. Títulos de Secciones (Igual que index.css)
+   Sección de Contacto
    ========================================================================== */
+#contact {
+    padding: var(--spacing-xl) var(--spacing-lg);
+}
+
 .section-title {
-    /* Estilo de títulos de secciones con línea decorativa debajo */
     text-align: center;
     margin: var(--spacing-xl) 0 var(--spacing-lg);
     color: var(--primary-color);
@@ -176,7 +166,6 @@ header {
 }
 
 .section-title::after {
-    /* Línea decorativa debajo del título */
     content: "";
     position: absolute;
     bottom: 0;
@@ -188,89 +177,66 @@ header {
     border-radius: 2px;
 }
 
-/* ==========================================================================
-   4. Contenido principal de la candidata
-   ========================================================================== */
-.candidate-profile {
-    padding: var(--spacing-xl) var(--spacing-lg);
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center; /* Centra el contenido, incluyendo la imagen */
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+    padding: 0 var(--spacing-lg);
 }
 
-.candidate-image {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin: 0 auto var(--spacing-lg);
-    display: block;
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
 }
 
-.candidate-details {
-    background-color: white;
+#contact-form input,
+#contact-form textarea {
+    padding: var(--spacing-md);
+    border: 1px solid #ddd;
     border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    padding: var(--spacing-lg);
+    font-size: 1rem;
     transition: var(--transition);
 }
 
-.candidate-details:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
 }
 
-.candidate-content {
-    flex: 1;
-    text-align: left; /* Alinea el texto a la izquierda dentro del contenedor */
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
 }
 
-.candidate-content h2 {
-    color: var(--primary-color);
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-md);
-    text-align: center; /* Centra el subtítulo */
+.submit-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: var(--spacing-md);
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
 }
 
-.candidate-content h3 {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    margin: var(--spacing-md) 0 var(--spacing-sm);
-}
-
-.candidate-content p {
-    margin-bottom: var(--spacing-md);
-}
-
-.candidate-content ul {
-    list-style: none;
-    margin-bottom: var(--spacing-lg);
-}
-
-.candidate-content ul li {
-    position: relative;
-    padding-left: var(--spacing-md);
-    margin-bottom: var(--spacing-sm);
-}
-
-.candidate-content ul li::before {
-    content: "•";
-    color: var(--secondary-color);
-    position: absolute;
-    left: 0;
+.submit-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
 }
 
 /* ==========================================================================
-   5. Footer (Igual que index.css)
+   Footer
    ========================================================================== */
 footer {
-    /* Pie de página con fondo oscuro */
     background-color: var(--primary-color);
     color: white;
     padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-md);
 }
 
 .footer-content {
-    /* Contenido del footer, distribuido en filas */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -279,70 +245,59 @@ footer {
 }
 
 .footer-info {
-    /* Sección de información del footer */
     flex: 1;
     min-width: 250px;
 }
 
 .footer-logo-section {
-    /* Contenedor del logo del footer */
     display: flex;
     align-items: center;
     margin-bottom: var(--spacing-lg);
 }
 
 .footer-logo {
-    /* Logo en el footer */
     width: 40px;
     height: auto;
     margin-right: var(--spacing-md);
 }
 
 .footer-info p {
-    /* Párrafos en la sección de información */
     margin-bottom: var(--spacing-sm);
 }
 
 .footer-info i {
-    /* Iconos en la sección de información */
     margin-right: var(--spacing-sm);
     color: var(--secondary-color);
 }
 
 .footer-info a {
-    /* Enlaces en el footer */
     color: var(--light-color);
     text-decoration: none;
     transition: var(--transition);
 }
 
 .footer-info a:hover {
-    /* Efecto hover en los enlaces */
     color: var(--secondary-color);
 }
 
 .social-section {
-    /* Sección de redes sociales */
     flex: 1;
     min-width: 250px;
     text-align: center;
 }
 
 .social-title {
-    /* Título de la sección de redes sociales */
     margin-bottom: var(--spacing-md);
     font-size: 1.2rem;
 }
 
 .social-icons {
-    /* Contenedor de los íconos sociales */
     display: flex;
     justify-content: center;
     gap: var(--spacing-md);
 }
 
 .social-icon {
-    /* Estilo de cada ícono social */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -356,13 +311,11 @@ footer {
 }
 
 .social-icon:hover {
-    /* Efecto hover en los íconos sociales */
     background-color: var(--secondary-color);
     transform: translateY(-3px);
 }
 
 .copyright {
-    /* Texto de derechos de autor */
     text-align: center;
     padding-top: var(--spacing-lg);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -371,54 +324,27 @@ footer {
 }
 
 /* ==========================================================================
-   6. Superposición del Menú (Overlay) (Igual que index.css)
-   ========================================================================== */
-.menu-overlay {
-    /* Superposición oscura para el menú móvil */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: var(--transition);
-}
-
-.menu-overlay.active {
-    /* Estado activo de la superposición */
-    opacity: 1;
-    visibility: visible;
-}
-
-/* ==========================================================================
-   7. Animaciones (Igual que index.css)
+   Animaciones
    ========================================================================== */
 @keyframes fadeIn {
-    /* Animación de entrada suave */
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
 .section-title,
-.candidate-details {
-    /* Aplica la animación a elementos específicos */
+.contact-container {
     animation: fadeIn 0.6s ease forwards;
 }
 
 /* ==========================================================================
-   8. Media Queries para Responsividad (Actualizado para .nav-menu)
+   Media Queries para Responsividad
    ========================================================================== */
 @media (max-width: 768px) {
-    /* Ajustes para pantallas medianas (tablets) */
     .menu-toggle {
-        display: block; /* Muestra el botón de menú hamburguesa */
+        display: block;
     }
 
     .nav-menu {
-        /* Menú móvil deslizante desde la derecha */
         position: fixed;
         top: 0;
         right: 0;
@@ -436,105 +362,69 @@ footer {
     }
 
     .nav-menu.active {
-        /* Estado activo del menú móvil */
         transform: translateX(0);
     }
 
-    .nav-menu button,
-    .nav-menu .nav-link {
-        /* Botones y enlaces del menú en móvil */
+    .nav-menu .nav-link,
+    .nav-menu button {
         width: 100%;
         padding: var(--spacing-md);
         text-align: center;
         text-decoration: none; /* Sin subrayado en móvil */
     }
 
-    .nav-menu button:visited,
-    .nav-menu .nav-link:visited {
+    .nav-menu .nav-link:visited,
+    .nav-menu button:visited {
         color: var(--primary-color); /* Color consistente en móvil */
         text-decoration: none;
     }
 
-    .candidate-details {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .candidate-image {
-        margin: 0 auto var(--spacing-md);
-        width: 150px;
-        height: 150px;
-    }
-
-    .candidate-content {
-        text-align: center; /* Centra el texto en móvil */
-    }
-
-    .candidate-content h3 {
-        text-align: center; /* Centra los subtítulos en móvil */
-    }
-
-    .candidate-content ul {
-        text-align: left; /* Mantiene las listas alineadas a la izquierda para mejor legibilidad */
-    }
-
     .footer-content {
-        /* Footer en columna */
         flex-direction: column;
         text-align: center;
     }
 
     .footer-logo-section {
-        /* Logo del footer centrado */
         justify-content: center;
     }
 
     .footer-info p {
-        /* Párrafos del footer alineados al centro */
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .footer-info i {
-        /* Iconos con margen inferior */
         margin-bottom: var(--spacing-sm);
     }
 }
 
 @media (max-width: 480px) {
-    /* Ajustes para pantallas pequeñas (móviles) */
     .logo-text .main-text {
-        font-size: 1rem; /* Reduce tamaño del texto principal */
+        font-size: 1rem;
     }
     
     .logo-text .sub-text {
-        font-size: 0.7rem; /* Reduce tamaño del texto secundario */
+        font-size: 0.7rem;
     }
 
     .section-title {
-        font-size: 1.5rem; /* Reduce tamaño de títulos */
+        font-size: 1.5rem;
     }
 
-    .candidate-image {
-        width: 120px;
-        height: 120px;
+    #contact {
+        padding: var(--spacing-lg) var(--spacing-md);
     }
 
-    .candidate-content h2 {
-        font-size: 1.2rem;
-    }
-
-    .candidate-content h3 {
-        font-size: 1rem;
+    .contact-container {
+        padding: 0 var(--spacing-md);
     }
 }
 
 /* ==========================================================================
-   9. Mejoras de Accesibilidad (Igual que index.css)
+   Mejoras de Accesibilidad
    ========================================================================== */
 @media (prefers-reduced-motion: reduce) {
-    /* Reduce animaciones para usuarios que prefieren menos movimiento */
     * {
         animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
@@ -544,31 +434,32 @@ footer {
 }
 
 /* ==========================================================================
-   10. Modo Oscuro (Opcional) (Actualizado para .nav-menu)
+   Modo Oscuro (Opcional)
    ========================================================================== */
 @media (prefers-color-scheme: dark) {
-    /* Estilos para modo oscuro automático */
     :root {
-        --light-color: #34495e; /* Ajusta color claro */
-        --dark-color: #ecf0f1;  /* Ajusta color oscuro */
+        --light-color: #34495e;
+        --dark-color: #ecf0f1;
     }
     
     body {
-        background-color: #1a1a1a; /* Fondo oscuro */
+        background-color: #1a1a1a;
         color: var(--dark-color);
     }
     
     header {
-        background-color: #222; /* Encabezado oscuro */
+        background-color: #222;
     }
     
-    .nav-menu button,
-    .nav-menu .nav-link {
-        color: var(--dark-color); /* Botones y enlaces en modo oscuro */
+    .nav-menu .nav-link,
+    .nav-menu button {
+        color: var(--dark-color);
     }
-
-    .candidate-details {
-        background-color: #2c2c2c; /* Tarjetas oscuras */
+    
+    #contact-form input,
+    #contact-form textarea {
+        background-color: #333;
         color: #ddd;
+        border-color: #444;
     }
 }
