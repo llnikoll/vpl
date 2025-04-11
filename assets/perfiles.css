@@ -512,42 +512,7 @@ footer {
     }
 }
 
-/* ==========================================================================
-   13. Modo Oscuro (Opcional)
-   ========================================================================== */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --light-color: #34495e;
-        --dark-color: #ecf0f1;
-    }
-    
-    body {
-        background-color: #1a1a1a;
-        color: var(--dark-color);
-    }
-    
-    header {
-        background-color: #222;
-    }
-    
-    .nav-menu button,
-    .nav-menu .nav-link {
-        color: var(--dark-color);
-    }
-    
-    .candidate-card, 
-    .candidate-card.featured {
-        background-color: #2c2c2c;
-        color: #ddd;
-    }
-    
-    #contact-form input,
-    #contact-form textarea {
-        background-color: #333;
-        color: #ddd;
-        border-color: #444;
-    }
-}
+
 
 /* ==========================================================================
    14. Estilos para Enlaces de Tarjetas de Candidatos
