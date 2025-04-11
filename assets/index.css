@@ -669,3 +669,6 @@ footer {
 .candidate-link:hover .candidate-info h3 {
     color: var(--secondary-color);
 }
+.candidate-info h4 {
+    color: #0066cc;
+}
