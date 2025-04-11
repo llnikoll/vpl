@@ -562,3 +562,24 @@ footer {
         color: #ddd;
     }
 }
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
